@@ -1,16 +1,6 @@
-<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
 <app-header></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-5">
-      <button type="button" class="btn btn-success content-container">New Recipe</button>
-      <hr/>
-      <app-recipe-list></app-recipe-list>
-      Recipe List Here
-    </div>
-    <div class="col-md-7 content-container">
-      Please select a recipe
-    </div>
-  </div>
+<div class="container content-container">
+  <router-outlet></router-outlet>
 </div>
-<!-- <router-outlet></router-outlet> -->
+
+

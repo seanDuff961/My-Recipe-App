@@ -1,1 +1,23 @@
-<p>recipe-detail works!</p>
+<div>
+  <h1>{{ recipe?.name }}</h1>
+  <p>{{ recipe?.description }}</p>
+  <img [src]="recipe?.imagePath" width="400px" height="400px" />
+  <br />
+  <!--dropdown button to manage recipe-->
+
+  <div class="dropdown content-container">
+    <button
+      class="btn btn-success dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      id="dropdownMenuBtn"
+    >
+      Manage Recipe
+    </button>
+    <div class="dropdown-menu my-dropdown" aria-labelledby="dropdownMenuBtn">
+      <a class="dropdown-item" href="#">Save Data</a>
+      <a class="dropdown-item" href="#">Fetch Data</a>
+    </div>
+  </div>
+</div>

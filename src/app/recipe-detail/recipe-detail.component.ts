@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RecipesModule } from '../recipes.module';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './recipe-detail.component.css'
 })
 export class RecipeDetailComponent {
-
+  @Input() recipe: any;
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
@@ -9,11 +9,13 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './recipe-item.component.html',
   styleUrl: './recipe-item.component.css'
 })
+
 export class RecipeItemComponent {
   @Input() index!: number;
   @Input() recipe: any;
+  @Output() recipeSelected = new EventEmitter<number>();
 
-  selectRecipe() {
-
+  selectRecipe(selectedIndex: number) {
+    this.recipeSelected.emit(selectedIndex);
   }
 }
